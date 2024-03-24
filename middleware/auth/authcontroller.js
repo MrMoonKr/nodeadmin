@@ -15,12 +15,12 @@ module.exports = {
     login: function ( req, res ) {
 
         const hostComponents = req.body.mysqlHost.split( ':' );
-        
+
         mysql.createConnection( {
-            user: req.body.mysqlUser,
-            password: req.body.mysqlPassword,
             host: hostComponents[ 0 ] || 'localhost',
             port: hostComponents[ 1 ] || '3306',
+            user: req.body.mysqlUser,
+            password: req.body.mysqlPassword,
             multipleStatements: true
         } ).then( function ( conn ) {
             var token = jwt.sign( {
