@@ -16,7 +16,9 @@
   "main": "middleware/index.js",
   "scripts": {
     "test": "node ./middleware/tests/test.js",
-    "postinstall": "npm install --prefix ./middleware/public/"
+
+    "start.dev": "nodemon ./server.js",
+    "start": "node ./server.js"
   },
   "repository": {
     "type": "git",

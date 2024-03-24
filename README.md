@@ -4,6 +4,19 @@
 
 A fantastically elegant interface for MySQL and Node.js/Express management, like phpmyadmin.
 
+## DevOps
+
+- VS Code
+- nvm for windows
+- Node.js
+- Express.js
+- MySQL, MariaDB
+
+## npm commands
+
+- $ npm init --yes
+- $ npm install --save express
+
 ## Installation
 
 ```
