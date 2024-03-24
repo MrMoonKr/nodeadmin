@@ -1,43 +1,40 @@
-var OS = require('os');
-var spawn = require('child_process').spawn;
-var server = require('net');
+var OS = require( 'os' );
+var spawn = require( 'child_process' ).spawn;
+var server = require( 'net' );
+
 
 module.exports = {
 
-  getHostname:function(callback) {
-    return callback(null, OS.hostname());
-  },
+    getHostname: function ( callback ) {
+        return callback( null, OS.hostname() );
+    },
 
-  getType:function(callback) {
-    return callback(null, OS.type());
-  },
+    getType: function ( callback ) {
+        return callback( null, OS.type() );
+    },
 
-  getUptime:function(callback) {
-    return callback(null, OS.uptime())
-  },
+    getUptime: function ( callback ) {
+        return callback( null, OS.uptime() )
+    },
 
-  getLoadAvg:function(callback) {
-    return callback(null, OS.loadavg());
-  },
+    getLoadAvg: function ( callback ) {
+        return callback( null, OS.loadavg() );
+    },
 
-  getTotalMemory: function(callback) {
-    return callback(null, OS.totalmem());
-  },
+    getTotalMemory: function ( callback ) {
+        return callback( null, OS.totalmem() );
+    },
 
-  getFreeMemory: function(callback) {
-    return OS.freemem();
-  },
+    getFreeMemory: function ( callback ) {
+        return OS.freemem();
+    },
 
-  getServerConnections: function(req, callback) {
-    // req.connection.server
-  },
+    getServerConnections: function ( req, callback ) {
+        // req.connection.server
+    },
 
-  getCpus: function(callback) {
-    return OS.cpus();
-  }
+    getCpus: function ( callback ) {
+        return OS.cpus();
+    }
 
 };
-
-
-
-
